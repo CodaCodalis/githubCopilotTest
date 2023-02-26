@@ -3,10 +3,12 @@ import random
 
 # Create a function called menu that prints the following menu:
 # 1. Guess a number
-# 2. Exit
+# 2. Show date and time
+# 3. Exit
 def menu():
     print("1. Guess a number")
-    print("2. Exit")
+    print("2. Show date and time")
+    print("3. Exit")
 
 
 # Create a function called guess_a_number
@@ -32,9 +34,16 @@ def guess_a_number():
     # print the user's number
     print("Your number: " + str(user_number))
 
+# Create a function called show_date_and_time
+def show_date_and_time():
+    # import the datetime module
+    import datetime
+    # print the current date and time
+    print(datetime.datetime.now())
+
 
 if __name__ == '__main__':
-    # Create a while loop that runs until the user enters 2
+    # Create a while loop that runs until the user enters 3
     while True:
         # Call the menu function
         menu()
@@ -45,6 +54,9 @@ if __name__ == '__main__':
             guess_a_number()
         # if the user enters 2, exit the program
         elif user_input == 2:
+            show_date_and_time()
+        # if the user enters 3, exit the program
+        elif user_input == 3:
             break
         # if the user enters anything else, print "Invalid input"
         else:
