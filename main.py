@@ -1,3 +1,6 @@
+# import the datetime module
+import datetime
+# import the random module
 import random
 
 
@@ -34,10 +37,9 @@ def guess_a_number():
     # print the user's number
     print("Your number: " + str(user_number))
 
+
 # Create a function called show_date_and_time
 def show_date_and_time():
-    # import the datetime module
-    import datetime
     # print the current date and time
     print(datetime.datetime.now())
 
